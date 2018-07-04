@@ -2,10 +2,22 @@
 const Node = require('./node.js')
 
 class Graph {
+  /**
+   * Creates an empty graph
+   * 
+   * @param {*} [defaultValue = null] default value for every created chunk
+   */
   constructor(defaultValue) {
     this.chunks = []
     this.defaultValue = defaultValue
   }
+  /**
+   * Adds a chunk in a given position
+   * 
+   * @param {Number} x chunks x coordinate
+   * @param {Number} y chunks y coordinate
+   * @param {*} [value = defaultValue] chunk value
+   */
   addChunk(x, y, value) {
     const chunk = new Node(x, y, value || this.defaultValue)
     const prefs = {
@@ -29,6 +41,12 @@ class Graph {
     }
     this.chunks.push(chunk)
   }
+  /**
+   * Returns chunk at given position or null otherwise
+   * 
+   * @param {Number} x chunks x coordinate
+   * @param {Number} y chunks y coordinate
+   */
   getChunk(x, y) {
     return this.chunks.find(c => {
       return c.x === x && c.y == y
