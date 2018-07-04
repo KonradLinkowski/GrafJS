@@ -1,3 +1,4 @@
+'use strict'
 export default class Node {
   constructor(x, y, value) {
     this.x = x

@@ -1,3 +1,4 @@
+'use strict'
 const Node = require('./node.js')
 
 export default class Graph {
