@@ -1,5 +1,5 @@
 'use strict'
-export default class Node {
+class Node {
   constructor(x, y, value) {
     this.x = x
     this.y = y
@@ -12,3 +12,5 @@ export default class Node {
     }
   }
 }
+
+module.exports = Node

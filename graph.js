@@ -1,7 +1,7 @@
 'use strict'
 const Node = require('./node.js')
 
-export default class Graph {
+class Graph {
   constructor(defaultValue) {
     this.chunks = []
     this.defaultValue = defaultValue
@@ -15,10 +15,18 @@ export default class Graph {
       right: this.getChunk(x + 1, y)
     }
     chunk.sides = prefs
-    prefs.up.sides.down = chunk
-    prefs.down.sides.up = chunk
-    prefs.left.sides.right = chunk
-    prefs.right.sides.left = chunk
+    if (prefs.up) {
+      prefs.up.sides.down = chunk
+    }
+    if (prefs.down) {
+      prefs.down.sides.up = chunk
+    }
+    if (prefs.left) {
+      prefs.left.sides.right = chunk
+    }
+    if (prefs.right) {
+      prefs.right.sides.left = chunk
+    }
     this.chunks.push(chunk)
   }
   getChunk(x, y) {
@@ -27,3 +35,5 @@ export default class Graph {
     }) || null
   }
 }
+
+module.exports = Graph
