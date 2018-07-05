@@ -1,5 +1,5 @@
 {
-  "name": "graph",
+  "name": "grafjs",
   "version": "1.0.0",
   "description": "2D graph for chunk-based games.",
   "main": "graph.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KonradLinkowski/GraphJS.git"
+    "url": "git+https://github.com/KonradLinkowski/GrafJS.git"
   },
   "author": "Konrad Linkowski <linkowski.konrad97@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KonradLinkowski/GraphJS/issues"
+    "url": "https://github.com/KonradLinkowski/GrafJS/issues"
   },
-  "homepage": "https://github.com/KonradLinkowski/GraphJS#readme"
+  "homepage": "https://github.com/KonradLinkowski/GrafJS#readme"
 }

@@ -1,4 +1,5 @@
-# Graph
-[![Build Status](https://travis-ci.org/KonradLinkowski/GraphJS.svg?branch=dev)](https://travis-ci.org/KonradLinkowski/GraphJS)
-[![Dependency Status](https://david-dm.org/KonradLinkowski/GraphJS.svg)](https://david-dm.org/KonradLinkowski/GraphJS)
+# GrafJS
+[![Build Status](https://travis-ci.org/KonradLinkowski/GrafJS.svg?branch=dev)](https://travis-ci.org/KonradLinkowski/GrafJS)
+[![Dependency Status](https://david-dm.org/KonradLinkowski/GrafJS.svg)](https://david-dm.org/KonradLinkowski/GrafJS)
+## Features
 2D graph for chunk-based games.
