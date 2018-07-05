@@ -19,6 +19,9 @@ class Graph {
    * @param {*} [value = defaultValue] chunk value
    */
   addChunk(x, y, value) {
+    if (this.getChunk(x, y)) {
+      throw new Error('A chunk at this position already exists.')
+    }
     const chunk = new Node(x, y, value || this.defaultValue)
     const prefs = {
       up: this.getChunk(x, y - 1),
@@ -60,6 +63,9 @@ class Graph {
    */
   removeChunk(x, y) {
     const chunk = this.getChunk(x, y)
+    if (!chunk) {
+      throw new Error('There isn\'t any chunk at this position.')
+    }
     let prefs = chunk.sides
     if (prefs.up) {
       prefs.up.sides.down = null

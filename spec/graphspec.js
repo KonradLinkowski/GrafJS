@@ -73,4 +73,14 @@ describe('Graph', () => {
     }
     done()
   })
+  it('should throw an error when adding chunk in an occupied space', done => {
+    let err = null
+    try {
+      graph.addChunk(graph.chunks[0].x, graph.chunks[0].y)
+    } catch(e)  {
+      err = e
+    }
+    expect(err).not.toBeNull()
+    done()
+  })
 })
