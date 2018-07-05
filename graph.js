@@ -52,6 +52,29 @@ class Graph {
       return c.x === x && c.y == y
     }) || null
   }
+  /**
+   * Removes chunk at given position
+   * 
+   * @param {*} x chunks x coordinate
+   * @param {*} y chunks y coordinate
+   */
+  removeChunk(x, y) {
+    const chunk = this.getChunk(x, y)
+    let prefs = chunk.sides
+    if (prefs.up) {
+      prefs.up.sides.down = null
+    }
+    if (prefs.down) {
+      prefs.down.sides.up = null
+    }
+    if (prefs.left) {
+      prefs.left.sides.right = null
+    }
+    if (prefs.right) {
+      prefs.right.sides.left = null
+    }
+    this.chunks.splice(this.chunks.indexOf(chunk), 1)
+  }
 }
 
 module.exports = Graph
