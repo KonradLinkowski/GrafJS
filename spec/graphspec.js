@@ -83,4 +83,41 @@ describe('Graph', () => {
     expect(err).not.toBeNull()
     done()
   })
+  it('should should not crash when adding chunks in spiral', done => {
+    const g = new Graph()
+    let jump = 1
+    let jumpCounter = 0
+    let jumpEven = false
+    let index = 0
+    let pos = {
+      x: 0,
+      y: 0
+    }
+    let directions = [{ x: 1, y: 0}, { x: 0, y: -1}, { x: -1, y: 0}, { x: 0, y: 1}]
+    let err = null
+    try {
+      for (let i = 0; i < 100; i++) {
+        g.addChunk(pos.x, pos.y, i)
+        pos.x += directions[index].x
+        pos.y += directions[index].y
+        jumpCounter++
+        if (jumpCounter >= jump) {
+          index++
+          if (index >= directions.length) {
+            index = 0
+          }
+          jumpCounter = 0
+          if (jumpEven) {
+            jump++
+            jumpEven = false
+          }
+          jumpEven = true
+        }
+      }
+    } catch(e) {
+      err = e
+    }
+    expect(err).toBeNull()
+    done()
+  })
 })
