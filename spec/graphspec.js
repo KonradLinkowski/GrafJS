@@ -55,4 +55,22 @@ describe('Graph', () => {
     expect(graph.getChunk(5, 5).value).toEqual(value)
     done()
   })
+  it('should remove specified chunk', done => {
+    const chunk = graph.getChunk(0, 0)
+    const prefs = chunk.sides
+    graph.removeChunk(chunk.x, chunk.y)
+    if (prefs.up) {
+      expect(prefs.up.sides.down).toBeNull()
+    }
+    if (prefs.down) {
+      expect(prefs.down.sides.up).toBeNull()
+    }
+    if (prefs.left) {
+      expect(prefs.left.sides.right).toBeNull()
+    }
+    if (prefs.right) {
+      expect(prefs.right.sides.left).toBeNull()
+    }
+    done()
+  })
 })
