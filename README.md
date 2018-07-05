@@ -3,6 +3,9 @@
 [![Dependency Status](https://david-dm.org/KonradLinkowski/GrafJS.svg)](https://david-dm.org/KonradLinkowski/GrafJS)
 ## Features
 2D graph for chunk-based games.
+- No dependencies
+- Easy to use
+- Lightweight
 ## Installing
 ```bash
 $ npm install axios
