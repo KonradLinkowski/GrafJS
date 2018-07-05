@@ -1,5 +1,12 @@
 'use strict'
 class Node {
+  /**
+   * Creates node for graph
+   * 
+   * @param {*} x node's x coordinate
+   * @param {*} y node's y coordinate
+   * @param {*} value node's value
+   */
   constructor(x, y, value) {
     this.x = x
     this.y = y
