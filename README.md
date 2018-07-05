@@ -8,7 +8,7 @@
 - Lightweight
 ## Installing
 ```bash
-$ npm install axios
+$ npm install grafjs
 ```
 ## Example
 Import
