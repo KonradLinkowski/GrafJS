@@ -2,6 +2,9 @@
   "name": "grafjs",
   "version": "1.0.0",
   "description": "2D graph for chunk-based games.",
+  "keywords": [
+    "games", "game", "2D", "graph", "chunks", "nodes", "map", "board"
+  ],
   "main": "graph.js",
   "scripts": {
     "test": "jasmine"
