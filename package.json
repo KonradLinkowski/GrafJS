@@ -3,7 +3,14 @@
   "version": "1.0.2",
   "description": "2D graph for chunk-based games.",
   "keywords": [
-    "games", "game", "2D", "graph", "chunks", "nodes", "map", "board"
+    "games",
+    "game",
+    "2D",
+    "graph",
+    "chunks",
+    "nodes",
+    "map",
+    "board"
   ],
   "main": "graph.js",
   "scripts": {
@@ -18,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/KonradLinkowski/GrafJS/issues"
   },
-  "homepage": "https://github.com/KonradLinkowski/GrafJS#readme"
+  "homepage": "https://github.com/KonradLinkowski/GrafJS#readme",
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  }
 }
