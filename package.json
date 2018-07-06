@@ -1,6 +1,6 @@
 {
   "name": "grafjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "2D graph for chunk-based games.",
   "keywords": [
     "games",
@@ -12,7 +12,7 @@
     "map",
     "board"
   ],
-  "main": "graph.js",
+  "main": "graf.js",
   "scripts": {
     "test": "jasmine"
   },

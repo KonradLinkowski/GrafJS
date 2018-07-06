@@ -1,5 +1,5 @@
 'use strict'
-const Graph = require('../graph')
+const Graph = require('../graf')
 
 describe('Graph', () => {
   const graph = new Graph([[1], [2], [3]])
