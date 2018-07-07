@@ -113,6 +113,13 @@ class Chunk {
   getDown() {
     return this.sides.down
   }
+  getValue() {
+    return this.value
+  }
+  setValue(value) {
+    this.value = value
+    return this
+  }
 }
 
 module.exports = Graf
