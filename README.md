@@ -33,6 +33,10 @@ const right = chunk.sides.right
 const up = chunk.sides.up
 const down = chunk.sides.down
 ```
+Getting chunk's content.
+```js
+const content = chunk.value
+```
 Removing a chunk
 ```js
 // removes the chunk at (3, 4)
