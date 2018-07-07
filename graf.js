@@ -21,7 +21,7 @@ class Graf {
     if (this.getChunk(x, y)) {
       throw new Error('A chunk at this position already exists.')
     }
-    const chunk = new Node(x, y, value || this.defaultValue)
+    const chunk = new Chunk(x, y, value || this.defaultValue)
     const prefs = {
       up: this.getChunk(x, y - 1),
       down: this.getChunk(x, y + 1),
@@ -82,7 +82,7 @@ class Graf {
   }
 }
 
-class Node {
+class Chunk {
   /**
    * Creates node for graph
    * 
@@ -100,6 +100,18 @@ class Node {
       down: null,
       left: null
     }
+  }
+  getLeft() {
+    return this.sides.left
+  }
+  getRight() {
+    return this.sides.right
+  }
+  getUp() {
+    return this.sides.up
+  }
+  getDown() {
+    return this.sides.down
   }
 }
 
