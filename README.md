@@ -21,7 +21,7 @@ Creating a board where each chunk is 20 x 20.
 ```js
 // creates 20 x 20 grid filled with 0's
 const grid = new Array(20).fill(null).map(a => new Array(20).fill(0))
-// creates the board
+// creates the board with a default value for each chunk
 const board = new Graf(grid)
 // adds examplary chunk
 board.addChunk(0, 0)
@@ -30,14 +30,17 @@ Getting specified chunk and adjacent chunks.
 ```js
 // returns chunk at position (1, 3)
 const chunk = board.getChunk(1, 3)
-const left = chunk.sides.left
-const right = chunk.sides.right
-const up = chunk.sides.up
-const down = chunk.sides.down
+const left = chunk.getLeft()
+const right = chunk.getRight()
+const up = chunk.getUp()
+const down = chunk.getDown()
 ```
-Getting chunk's content.
+Getting and setting chunk's content.
 ```js
-const content = chunk.value
+// gets value
+const content = chunk.getValue()
+// sets value
+chunk.setValue([1])
 ```
 Removing a chunk
 ```js
