@@ -1,5 +1,5 @@
 # GrafJS
-[![NPM Downloads][https://img.shields.io/npm/dw/grafjs.svg]](https://npmjs.org/package/express)
+[![NPM Downloads](https://img.shields.io/npm/dw/grafjs.svg)](https://npmjs.org/package/grafjs)
 [![Build Status](https://travis-ci.org/KonradLinkowski/GrafJS.svg?branch=dev)](https://travis-ci.org/KonradLinkowski/GrafJS)
 [![Dependency Status](https://david-dm.org/KonradLinkowski/GrafJS.svg)](https://david-dm.org/KonradLinkowski/GrafJS)
 [![devDependency Status](https://david-dm.org/KonradLinkowski/GrafJS/dev-status.svg)](https://david-dm.org/KonradLinkowski/GrafJS#info=devDependencies)
